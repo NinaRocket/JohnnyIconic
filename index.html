@@ -19,6 +19,8 @@
   <img class="bouncing-croc" id="croc1" src="./crocs.png" alt="Croc1">
   <img class="bouncing-croc" id="croc2"  src="./crocs.png" alt="Croc2">
  
+  <img class="bouncing-pop" id="pop1" src="./ME.png" alt="pop1">
+  <img class="bouncing-croc" id="croc2"  src="./ME.png" alt="pop2">
 
   <img class="bouncing-nike" id="swoosh1" src="./pngimg.com - nike_PNG9.png" alt="swoosh1">
   <img class="bouncing-nike" id="swoosh2"  src="./pngimg.com - nike_PNG9.png" alt="swoosh2">
@@ -32,7 +34,15 @@
       <img src="./johnnygwin.png" alt="winnin">
       <img src="./johnnysparkle.png" alt="sparkle">
       <img src="./johnnytat.png" alt="tattin up">
-      <!-- Repeat images if you want it to loop smoother -->
+      <img src="./johnnyride.png" alt="vroom vroom">
+      <img src="./johnnysnaz.png" alt="oh yeah">
+<!-- repeat images -->
+      <img src="./johnnydisney.png" alt="in disney">
+      <img src="./falljohnny.jpg" alt="guardians of galaxy fall">
+      <img src="./johnnydrum.png" alt="drummin">
+      <img src="./johnnygwin.png" alt="winnin">
+      <img src="./johnnysparkle.png" alt="sparkle">
+      <img src="./johnnytat.png" alt="tattin up">
       <img src="./johnnyride.png" alt="vroom vroom">
       <img src="./johnnysnaz.png" alt="oh yeah">
     </div>
@@ -41,15 +51,16 @@
   <section class="party-info party-center">
   
     <h2>🎉 Party Details 🎉</h2>
+    <p>We are so excited to see you at Johnny's 40th birthday party! There will be food, friends, games and even a contest!</p>
     <p><strong>Date:</strong> Saturday, May 3rd</p>
-    <p><strong>Time:</strong> 3:30 PM – 6:30 PM (Contest winner announced at 6:00 PM)</p>
+    <p><strong>Time:</strong> 3:30 PM – 6:30 PM </p>
     <p><strong>Where:</strong> Johnny & Nina's Home</p>
 
   </section>
 
 
   <section class="about-johnny party-center">
-    <h2>💖 About Johnny</h2>
+    <h2>💖 Why We Love Johnny 💖 </h2>
     <p>Johnny is more than the sweetest man in the world, he is also the King of Cool: Collector of HUNDREDS of Funko Pops, Crocs Connoisseur, Disney Dreamer, Legendary Lego-ist, and always rocking that Nike drip.</p>
     <div class="gallery">
       <img src="./johnnyfunko.png" alt="Funko">
@@ -60,7 +71,7 @@
 
   <section class="contest-info party-center">
     <h2>👟 Dress Like Johnny Contest 👑</h2>
-    <p>Mimicry is the best flattery! Let's show Johnny how freakin' cool he is by dressing like him! And YES there will be prizes! So throw your crocs and tie dye on and let's GOOOOOOOOOOO!</p>
+    <p>Imitation is the sincerest form of flattery! Let's show Johnny how freakin' cool he is by dressing like him! And YES there will be a contest and prizes for the most Johnny-like participant! So throw your crocs and tie dye on and LET'S GOOOOOOOOOOO!</p>
   </section>
 
 
@@ -95,6 +106,25 @@
     randomizeCroc('croc2', 2500);
 
   </script>
+
+<script>
+  function randomizePop(id, delay) {
+    const croc = document.getElementById(id);
+    function move() {
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 100));
+      croc.style.left = `${x}px`;
+      croc.style.top = `${y}px`;
+    }
+    move(); // initial position
+    setInterval(move, delay);
+  }
+
+  // Call with slightly staggered delays for chaos 💚
+  randomizePop('pop1', 2000);
+  randomizePop('pop2', 2500);
+
+</script>
 
 <script>
   function randomizeSwoosh(id, delay) {
