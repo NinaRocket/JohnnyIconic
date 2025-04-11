@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./crocs.png" type="image/png">
+
+  <title>Johnny's 40th Birthday!</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Johnny is Turning 40!</h1>
+      <h2>Come Celebrate the Icon Himself</h2>
+    </div>
+  </div>
+  <img class="bouncing-croc" id="croc1" src="./crocs.png" alt="Croc1">
+  <img class="bouncing-croc" id="croc2"  src="./crocs.png" alt="Croc2">
+ 
+
+  <img class="bouncing-nike" id="swoosh1" src="./pngimg.com - nike_PNG9.png" alt="swoosh1">
+  <img class="bouncing-nike" id="swoosh2"  src="./pngimg.com - nike_PNG9.png" alt="swoosh2">
+  
+
+  <section class="neon-slider">
+    <div class="slider-track">
+      <img src="./johnnydisney.png" alt="in disney">
+      <img src="./falljohnny.jpg" alt="guardians of galaxy fall">
+      <img src="./johnnydrum.png" alt="drummin">
+      <img src="./johnnygwin.png" alt="winnin">
+      <img src="./johnnysparkle.png" alt="sparkle">
+      <img src="./johnnytat.png" alt="tattin up">
+      <!-- Repeat images if you want it to loop smoother -->
+      <img src="./johnnyride.png" alt="vroom vroom">
+      <img src="./johnnysnaz.png" alt="oh yeah">
+    </div>
+  </section>
+
+  <section class="party-info party-center">
+  
+    <h2>🎉 Party Details 🎉</h2>
+    <p><strong>Date:</strong> Saturday, May 3rd</p>
+    <p><strong>Time:</strong> 3:30 PM – 6:30 PM (Contest winner announced at 6:00 PM)</p>
+    <p><strong>Where:</strong> Johnny & Nina's Home</p>
+
+  </section>
+
+
+  <section class="about-johnny party-center">
+    <h2>💖 About Johnny</h2>
+    <p>Johnny is more than the sweetest man in the world, he is also the King of Cool: Collector of HUNDREDS of Funko Pops, Crocs Connoisseur, Disney Dreamer, Legendary Lego-ist, and always rocking that Nike drip.</p>
+    <div class="gallery">
+      <img src="./johnnyfunko.png" alt="Funko">
+    </div>
+  </section>
+
+
+
+  <section class="contest-info party-center">
+    <h2>👟 Dress Like Johnny Contest 👑</h2>
+    <p>Mimicry is the best flattery! Let's show Johnny how freakin' cool he is by dressing like him! And YES there will be prizes! So throw your crocs and tie dye on and let's GOOOOOOOOOOO!</p>
+  </section>
+
+
+
+<!-- 
+  <section class="gallery">
+   
+    <img src="https://placehold.co/200x200/00FFFF/000?text=Nike" alt="Nike">
+    <img src="https://placehold.co/200x200/FFD700/000?text=Crocs" alt="Crocs">
+    <img src="https://placehold.co/200x200/FF69B4/000?text=Disney" alt="Disney">
+  </section> -->
+ 
+  <section>
+    <a class="rsvp-button" href="#">May the Johnny-est Win</a>
+  </section>
+
+  <script>
+    function randomizeCroc(id, delay) {
+      const croc = document.getElementById(id);
+      function move() {
+        const x = Math.floor(Math.random() * (window.innerWidth - 100));
+        const y = Math.floor(Math.random() * (window.innerHeight - 100));
+        croc.style.left = `${x}px`;
+        croc.style.top = `${y}px`;
+      }
+      move(); // initial position
+      setInterval(move, delay);
+    }
+  
+    // Call with slightly staggered delays for chaos 💚
+    randomizeCroc('croc1', 2000);
+    randomizeCroc('croc2', 2500);
+
+  </script>
+
+<script>
+  function randomizeSwoosh(id, delay) {
+    const croc = document.getElementById(id);
+    function move() {
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 100));
+      croc.style.left = `${x}px`;
+      croc.style.top = `${y}px`;
+    }
+    move(); // initial position
+    setInterval(move, delay);
+  }
+
+  // Call with slightly staggered delays for chaos 💚
+  randomizeSwoosh('swoosh1', 2000);
+  randomizeSwoosh('swoosh2', 2500);
+
+</script>
+  
+  
+  
+</body>
+</html>
