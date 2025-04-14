@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <button id="stop-music-btn" title="Stop the music">🔇 Stop Music 😔</button>
   <div id="party-popup">
     <div class="popup-box">
       <h2>🎉 Are you ready to party? 🎉</h2>
@@ -24,6 +24,8 @@
     <div class="hero-content">
       <h1>Johnny is Turning 40!</h1>
       <h2>Come Celebrate the Icon Himself</h2>
+   
+
     </div>
   </div>
   <img class="bouncing-croc" id="croc1" src="./crocs.png" alt="Croc1">
@@ -180,6 +182,17 @@
     audio.play();
   });
 </script>
+
+<!-- stop music -->
+<script>
+  const stopBtn = document.getElementById('stop-music-btn');
+
+  stopBtn.addEventListener('click', () => {
+    audio.pause();
+    audio.currentTime = 0; // Reset to start
+  });
+</script>
+
 
 </body>
 </html>
