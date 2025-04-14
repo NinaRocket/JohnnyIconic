@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div id="party-popup">
+    <div class="popup-box">
+      <h2>🎉 Are you ready to party? 🎉</h2>
+      <button id="party-btn">LET'S GO</button>
+    </div>
+  </div>
+  
+  <audio id="party-audio" src="/Party Hard Edit.mp3" preload="auto"></audio>
+
   <div class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
@@ -51,7 +61,8 @@
   <section class="party-info party-center">
   
     <h2>🎉 Party Details 🎉</h2>
-    <p>We are so excited to see you at Johnny's 40th birthday party! There will be food, friends, games and even a contest!</p>
+    <p>We are so excited to see you at Johnny's 40th birthday party! There will be food (including some of Johnny's favorite foods and drinks), friends, games and even a contest! So please come out to celebrate with us! </p>
+   
     <p><strong>Date:</strong> Saturday, May 3rd</p>
     <p><strong>Time:</strong> 3:30 PM – 6:30 PM </p>
     <p><strong>Where:</strong> Johnny & Nina's Home</p>
@@ -60,8 +71,8 @@
 
 
   <section class="about-johnny party-center">
-    <h2>💖 Why We Love Johnny 💖 </h2>
-    <p>Johnny is more than the sweetest man in the world, he is also the King of Cool: Collector of HUNDREDS of Funko Pops, Crocs Connoisseur, Disney Dreamer, Legendary Lego-ist, and always rocking that Nike drip.</p>
+    <h2>💖 We Love Johnny 💖 </h2>
+    <p>Johnny is more than the sweetest man in the world, he is also the King of Cool: Collector of HUNDREDS of Funko Pops, Crocs Connoisseur, Disney Adult, Legendary Lego-ist, Master Crafter, and always rocking that Nike drip.</p>
     <div class="gallery">
       <img src="./johnnyfunko.png" alt="Funko">
     </div>
@@ -88,6 +99,7 @@
     <a class="rsvp-button" href="#">May the Johnny-est Win</a>
   </section>
 
+  <!-- crocs -->
   <script>
     function randomizeCroc(id, delay) {
       const croc = document.getElementById(id);
@@ -107,6 +119,7 @@
 
   </script>
 
+<!-- funkopop -->
 <script>
   function randomizePop(id, delay) {
     const croc = document.getElementById(id);
@@ -126,6 +139,7 @@
 
 </script>
 
+<!-- nike swoosh -->
 <script>
   function randomizeSwoosh(id, delay) {
     const croc = document.getElementById(id);
@@ -145,6 +159,7 @@
 
 </script>
   
+<!-- parallax -->
 <script>
   const hero = document.querySelector('.hero');
 
@@ -154,6 +169,17 @@
   });
 </script>
 
-  
+<!-- audio -->
+<script>
+  const audio = document.getElementById('party-audio');
+  const popup = document.getElementById('party-popup');
+  const btn = document.getElementById('party-btn');
+
+  btn.addEventListener('click', () => {
+    popup.style.display = 'none';
+    audio.play();
+  });
+</script>
+
 </body>
 </html>
